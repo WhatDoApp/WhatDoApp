@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/email"
             android:layout_gravity="center_horizontal"
             android:padding="5dp"
             android:textSize="20sp"
@@ -71,12 +71,13 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/password"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="#ffffffff"
             android:textSize="20sp"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:hint="password"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -87,7 +88,20 @@
             android:layout_marginTop="40dp"
             android:background="#ff3fceed"
             android:textSize="20sp"
-            android:typeface="serif" />
+            android:typeface="serif"
+            android:onClick="loginClick"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/button2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="#ff3fceed"
+            android:textSize="20sp"
+            android:typeface="serif"
+            android:onClick="registerClick"/>
 
     </LinearLayout>
 
