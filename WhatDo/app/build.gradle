@@ -28,5 +28,7 @@ dependencies {
     compile 'com.github.kikoso:SwipeableCards:1.1-RELEASE@aar'
     compile 'com.jakewharton:butterknife:5.1.2'
     compile 'com.android.support:cardview-v7:22.2.0'
-
+    compile('com.mikepenz:materialdrawer:3.0.7@aar') {
+        transitive = true
+    }
 }
