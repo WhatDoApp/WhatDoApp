@@ -5,6 +5,7 @@ package com.whatdo.whatdoco.whatdo;
  */
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -37,13 +38,29 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
         return null;
     }
 
+    ClickListener clickListener;
+
+    public void setClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
+    public interface ClickListener {
+        public void onClick(View v, int pos);
+
+    }
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         if (holder.viewType == ROW_TYPE) {
             String rowText = rows.get(position - 1);
             holder.textView.setText(rowText);
             holder.imageView.setImageResource(R.mipmap.ic_launcher);
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickListener.onClick(view, position);
+            }
+        });
     }
 
     @Override
@@ -58,7 +75,7 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
         return ROW_TYPE;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnTouchListener {
         protected int viewType;
 
         @InjectView(R.id.drawer_row_icon) ImageView imageView;
@@ -69,9 +86,15 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
 
             this.viewType = viewType;
 
+            itemView.setOnTouchListener(this);
             if (viewType == ROW_TYPE) {
                 ButterKnife.inject(this, itemView);
             }
+        }
+
+        @Override
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            return false;
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.whatdo.whatdoco.whatdo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -67,6 +69,24 @@ public class QuestionCreatorActivity extends AppCompatActivity {
         drawerRecyclerView.setAdapter(drawerAdapter);
         drawerRecyclerView.setHasFixedSize(true);
         drawerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        drawerAdapter.setClickListener(new com.whatdo.whatdoco.whatdo.DrawerAdapter.ClickListener() {
+            @Override
+            public void onClick(View v, int pos) {
+                switch (pos)
+                {
+                    case 0:
+                        startActivity(new Intent(getApplicationContext(), QuestionsActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(getApplicationContext(), MyQuestionsActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getApplicationContext(), CategoriesActivity.class));
+                        break;
+                }
+            }
+        });
     }
 
     @Override
