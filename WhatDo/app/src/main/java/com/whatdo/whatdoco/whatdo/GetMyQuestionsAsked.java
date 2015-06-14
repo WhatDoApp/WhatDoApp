@@ -1,4 +1,4 @@
-package android_class.myapplication;
+package com.whatdo.whatdoco.whatdo;
 
 import android.app.ProgressDialog;
 import android.content.Context;

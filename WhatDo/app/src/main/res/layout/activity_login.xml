@@ -54,7 +54,7 @@
                 android:hint="password"/>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="203dp"
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:id="@+id/button"
@@ -67,14 +67,14 @@
                 style="@style/LogButt" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="201dp"
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:id="@+id/button2"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="18dp"
                 android:background="#ff3fceed"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:typeface="serif"
                 android:onClick="registerClick"
                 android:paddingLeft="20dp"

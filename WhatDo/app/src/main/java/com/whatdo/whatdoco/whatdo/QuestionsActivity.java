@@ -21,6 +21,7 @@ public class QuestionsActivity extends Activity {
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
     private int i;
+    private GetQuestionsBatch getQuestionsBatch;
 
     @InjectView(R.id.frame) SwipeFlingAdapterView flingContainer;
 
@@ -33,19 +34,9 @@ public class QuestionsActivity extends Activity {
 
 
         al = new ArrayList<>();
-        al.add("php");
-        al.add("c");
-        al.add("python");
-        al.add("java");
-        al.add("html");
-        al.add("c++");
-        al.add("css");
-        al.add("javascript");
 
-        arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
-
-
-        flingContainer.setAdapter(arrayAdapter);
+        getQuestionsBatch = new GetQuestionsBatch("5749328048029696", this, flingContainer);
+        getQuestionsBatch.execute("");
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
             public void removeFirstObjectInAdapter() {
@@ -60,21 +51,15 @@ public class QuestionsActivity extends Activity {
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-                makeToast(QuestionsActivity.this, "Left!");
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                makeToast(QuestionsActivity.this, "Right!");
             }
 
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
                 // Ask for more data here
-                al.add("XML ".concat(String.valueOf(i)));
-                arrayAdapter.notifyDataSetChanged();
-                Log.d("LIST", "notified");
-                i++;
             }
 
             @Override
@@ -82,15 +67,6 @@ public class QuestionsActivity extends Activity {
                 View view = flingContainer.getSelectedView();
                 view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
                 view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
-            }
-        });
-
-
-        // Optionally add an OnItemClickListener
-        flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClicked(int itemPosition, Object dataObject) {
-                makeToast(QuestionsActivity.this, "Clicked!");
             }
         });
 
