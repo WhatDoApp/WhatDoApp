@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="LogButt" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorButtonNormal">#ff3fceed</item>
     </style>
 
 </resources>

@@ -6,103 +6,82 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bg_gradient">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp"
-        android:src="@drawable/what_do_logo_transparent_no_background"
-        android:paddingTop="30dp"
-        android:paddingRight="5dp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="151dp"
-        android:id="@+id/linearLayout"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="What"
-            android:id="@+id/textView"
-            android:textSize="30sp"
-            android:typeface="serif" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Do"
-            android:id="@+id/textView2"
-            android:textColor="#ff3fceed"
-            android:textSize="30sp"
-            android:typeface="serif" />
-    </LinearLayout>
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/email"
-            android:layout_gravity="center_horizontal"
-            android:padding="5dp"
-            android:textSize="20sp"
-            android:background="#ffffffff"
-            android:hint="e-mail" />
+            android:id="@+id/imageView"
+            android:src="@drawable/what_do_logo_final"
+            android:layout_weight="1"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:layout_marginTop="20dp" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/password"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:background="#ffffffff"
-            android:textSize="20sp"
-            android:padding="5dp"
-            android:hint="password"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="2.2">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:id="@+id/button"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:background="#ff3fceed"
-            android:textSize="20sp"
-            android:typeface="serif"
-            android:onClick="loginClick"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/email"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:background="#ffffffff"
+                android:hint="e-mail" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:id="@+id/button2"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:background="#ff3fceed"
-            android:textSize="20sp"
-            android:typeface="serif"
-            android:onClick="registerClick"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/password"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="#ffffffff"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:hint="password"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="#ff3fceed"
+                android:textSize="20sp"
+                android:typeface="serif"
+                android:onClick="loginClick"
+                style="@style/LogButt" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:id="@+id/button2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="#ff3fceed"
+                android:textSize="18sp"
+                android:typeface="serif"
+                android:onClick="registerClick"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                style="@style/LogButt" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
