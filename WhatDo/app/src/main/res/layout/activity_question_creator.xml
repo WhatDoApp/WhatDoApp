@@ -4,17 +4,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     tools:context="com.whatdo.whatdoco.whatdo.QuestionCreatorActivity"
     android:background="@drawable/bg_gradient">
-=======
-    tools:context="com.whatdo.whatdoco.whatdo.QuestionCreatorActivity">
->>>>>>> parent of 9e9d7ac... NavigationDrawer Added to Questions and Question Creator page
-=======
-    tools:context="com.whatdo.whatdoco.whatdo.QuestionCreatorActivity"
-    android:background="@drawable/bg_gradient">
->>>>>>> 7d1fdb6ec3e25aa378b795298ce492bbf5e6a0d2
 
     <LinearLayout
         android:orientation="vertical"
