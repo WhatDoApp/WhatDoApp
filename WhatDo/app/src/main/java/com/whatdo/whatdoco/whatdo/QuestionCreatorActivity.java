@@ -1,16 +1,32 @@
 package com.whatdo.whatdoco.whatdo;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class QuestionCreatorActivity extends AppCompatActivity {
+public class QuestionCreatorActivity extends Activity {
 
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.Adapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_creator);
+        mRecyclerView = (RecyclerView)findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+
+        mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
+
+        mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mAdapter = new CardAdapter();
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override

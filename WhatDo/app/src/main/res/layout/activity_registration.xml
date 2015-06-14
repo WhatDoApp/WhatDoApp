@@ -17,7 +17,7 @@
         android:id="@+id/linearLayout"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
-        
+
         </LinearLayout>
 
 </RelativeLayout>
