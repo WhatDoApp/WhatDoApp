@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
-    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,7 +10,64 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_advice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_advice"/>
+
+                <TextView
+                    android:id="@+id/text_advice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Advice"/>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_relationships"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_relationships"/>
+
+                <TextView
+                    android:id="@+id/text_relationships"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Relationships"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -18,88 +75,239 @@
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_relationships"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                card_view:cardCornerRadius="5dp"
-                android:layout_weight="1">
-
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
                 <ImageView
+                    android:id="@+id/img_academia"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/image_1"
-                    android:src="@drawable/what_do_relationships" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_academia"/>
+
+                <TextView
+                    android:id="@+id/text_academia"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Academia"/>
+
             </android.support.v7.widget.CardView>
-
             <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_gaming_entertainment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                card_view:cardCornerRadius="5dp"
-                android:layout_weight="1">
-
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
                 <ImageView
+                    android:id="@+id/img_entertaiment"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/image_2"
-                    android:src="@drawable/what_do_gaming_entertainment" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_gaming_entertainment"/>
+
+                <TextView
+                    android:id="@+id/text_entertainment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Gaming and Entertainment"/>
+
             </android.support.v7.widget.CardView>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_art"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_arts"/>
+
+                <TextView
+                    android:id="@+id/text_art"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Arts"/>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_movies"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_movies"/>
+
+                <TextView
+                    android:id="@+id/text_movies"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Movies"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_academia"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_technology"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_technology"/>
+
+                <TextView
+                    android:id="@+id/text_technology"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Technology"/>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_sports"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_sports"/>
+
+                <TextView
+                    android:id="@+id/text_sports"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Sports"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_health"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_health_fitness"/>
+
+                <TextView
+                    android:id="@+id/text_health"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Health and Fitness"/>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                card_view:cardCornerRadius="3dp">
+                <ImageView
+                    android:id="@+id/img_fashion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/what_do_fashion"/>
+
+                <TextView
+                    android:id="@+id/text_fashion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:background="#757575"
+                    android:alpha="0.8"
+                    android:textSize="14dp"
+                    android:text="Fashion"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius="5dp"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/image_3"
-                    android:src="@drawable/what_do_academia" />
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_health_fitness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                card_view:cardCornerRadius="5dp"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/image_4"
-                    android:src="@drawable/what_do_health_fitness" />
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+                android:text="Done!"
+                android:id="@+id/button3"
+                android:background="#ff3fceed"
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
