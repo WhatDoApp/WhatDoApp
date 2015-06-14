@@ -1,12 +1,13 @@
 package com.whatdo.whatdoco.whatdo;
 
 import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class CategoriesActivity extends Activity {
+public class CategoriesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
