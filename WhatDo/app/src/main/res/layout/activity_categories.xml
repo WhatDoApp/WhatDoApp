@@ -3,15 +3,11 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.whatdo.whatdoco.whatdo.CategoriesActivity"
     android:background="@drawable/bg_gradient">
 <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <LinearLayout
         android:orientation="vertical"
         android:background="@drawable/bg_gradient"
@@ -23,173 +19,43 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="7dp">
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_advice"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_advice"/>
+            android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/text_advice"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Advice"/>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton"
+                android:src="@drawable/what_do_advice"
+                android:scaleType="fitXY"
+                android:layout_weight="1" />
 
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_relationships"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_relationships"/>
-
-                <TextView
-                    android:id="@+id/text_relationships"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Relationships"/>
-
-            </android.support.v7.widget.CardView>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/what_do_relationships"
+                android:scaleType="fitXY"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="7dp">
+            android:layout_height="wrap_content">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_academia"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_academia"/>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton3"
+                android:src="@drawable/what_do_academia"
+                android:scaleType="fitXY" />
 
-                <TextView
-                    android:id="@+id/text_academia"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Academia"/>
-
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_entertaiment"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_gaming_entertainment"/>
-
-                <TextView
-                    android:id="@+id/text_entertainment"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Gaming and Entertainment"/>
-
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="7dp">
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_art"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_arts"/>
-
-                <TextView
-                    android:id="@+id/text_art"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Arts"/>
-
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_movies"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_movies"/>
-
-                <TextView
-                    android:id="@+id/text_movies"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Movies"/>
-
-            </android.support.v7.widget.CardView>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton4"
+                android:src="@drawable/what_do_gaming_entertainment"
+                android:scaleType="fitXY" />
         </LinearLayout>
 
         <LinearLayout
@@ -198,56 +64,19 @@
             android:layout_height="match_parent"
             android:padding="7dp">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_technology"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_technology"/>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton5"
+                android:src="@drawable/what_do_arts"
+                android:scaleType="fitXY" />
 
-                <TextView
-                    android:id="@+id/text_technology"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Technology"/>
-
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_sports"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_sports"/>
-
-                <TextView
-                    android:id="@+id/text_sports"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Sports"/>
-
-            </android.support.v7.widget.CardView>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton6"
+                android:src="@drawable/what_do_movies"
+                android:scaleType="fitXY" />
         </LinearLayout>
 
         <LinearLayout
@@ -256,57 +85,40 @@
             android:layout_height="match_parent"
             android:padding="7dp">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_health"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_health_fitness"/>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton7"
+                android:src="@drawable/what_do_technology"
+                android:scaleType="fitXY" />
 
-                <TextView
-                    android:id="@+id/text_health"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Health and Fitness"/>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton8"
+                android:src="@drawable/what_do_sports"
+                android:scaleType="fitXY" />
+        </LinearLayout>
 
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                card_view:cardCornerRadius="3dp">
-                <ImageView
-                    android:id="@+id/img_fashion"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/what_do_fashion"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="7dp">
 
-                <TextView
-                    android:id="@+id/text_fashion"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_horizontal"
-                    android:background="#757575"
-                    android:alpha="0.8"
-                    android:textSize="14dp"
-                    android:text="Fashion"/>
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton9"
+                android:src="@drawable/what_do_health_fitness"
+                android:scaleType="fitXY" />
 
-            </android.support.v7.widget.CardView>
-
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton10"
+                android:src="@drawable/what_do_fashion"
+                android:scaleType="fitXY" />
         </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

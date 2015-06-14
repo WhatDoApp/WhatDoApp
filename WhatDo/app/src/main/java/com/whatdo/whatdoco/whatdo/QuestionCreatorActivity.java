@@ -1,42 +1,34 @@
 package com.whatdo.whatdoco.whatdo;
 
 import android.app.Activity;
+<<<<<<< HEAD
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+=======
+>>>>>>> parent of 9e9d7ac... NavigationDrawer Added to Questions and Question Creator page
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+=======
+>>>>>>> parent of 9e9d7ac... NavigationDrawer Added to Questions and Question Creator page
 
-import com.mikepenz.materialdrawer.adapter.DrawerAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
-public class QuestionCreatorActivity extends AppCompatActivity {
+public class QuestionCreatorActivity extends Activity {
 
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     RecyclerView.Adapter mAdapter;
-    DrawerLayout mDrawerLayout;
-    ListView mDrawerList;
-    ActionBarDrawerToggle mDrawerToggle;
-    String[] mDrawerListItems;
-    @InjectView(R.id.drawer_layout) DrawerLayout drawerLayout;
-    @InjectView(R.id.toolbar) Toolbar toolbar;
-    @InjectView(R.id.drawer_recyclerView) RecyclerView drawerRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +43,7 @@ public class QuestionCreatorActivity extends AppCompatActivity {
 
         mAdapter = new CardAdapter();
         mRecyclerView.setAdapter(mAdapter);
+<<<<<<< HEAD
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
 
@@ -67,6 +60,26 @@ public class QuestionCreatorActivity extends AppCompatActivity {
         drawerRecyclerView.setAdapter(drawerAdapter);
         drawerRecyclerView.setHasFixedSize(true);
         drawerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        drawerAdapter.setClickListener(new com.whatdo.whatdoco.whatdo.DrawerAdapter.ClickListener() {
+            @Override
+            public void onClick(View v, int pos) {
+                switch (pos)
+                {
+                    case 0:
+                        startActivity(new Intent(getApplicationContext(), QuestionsActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(getApplicationContext(), MyQuestionsActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getApplicationContext(), CategoriesActivity.class));
+                        break;
+                }
+            }
+        });
+=======
+>>>>>>> parent of 9e9d7ac... NavigationDrawer Added to Questions and Question Creator page
     }
 
     @Override

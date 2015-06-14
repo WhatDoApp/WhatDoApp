@@ -1,51 +1,30 @@
 package com.whatdo.whatdoco.whatdo;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class QuestionsActivity extends AppCompatActivity {
+public class QuestionsActivity extends Activity {
 
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
     private int i;
 
     @InjectView(R.id.frame) SwipeFlingAdapterView flingContainer;
-    @InjectView(R.id.drawer_layout)
-    DrawerLayout drawerLayout;
-    @InjectView(R.id.toolbar)
-    Toolbar toolbar;
-    @InjectView(R.id.drawer_recyclerView)
-    RecyclerView drawerRecyclerView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,23 +94,6 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         });
 
-        ButterKnife.inject(this);
-        setSupportActionBar(toolbar);
-
-        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
-        drawerLayout.setDrawerListener(drawerToggle);
-        drawerToggle.syncState();
-
-        List<String> rows = new ArrayList<>();
-        rows.add("Option 1");
-        rows.add("Option 2: A longer option");
-        rows.add("Option 3: The longest option of all");
-
-        com.whatdo.whatdoco.whatdo.DrawerAdapter drawerAdapter = new com.whatdo.whatdoco.whatdo.DrawerAdapter(rows);
-        drawerRecyclerView.setAdapter(drawerAdapter);
-        drawerRecyclerView.setHasFixedSize(true);
-        drawerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     static void makeToast(Context ctx, String s){
@@ -139,27 +101,5 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        switch (item.getItemId()) {
-            case R.id.action_add_question:
-                Intent h = new Intent(this, QuestionCreatorActivity.class);
-                h.putExtras(getIntent());
-                startActivity(h);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_questions, menu);
-        return true;
-    }
 }
