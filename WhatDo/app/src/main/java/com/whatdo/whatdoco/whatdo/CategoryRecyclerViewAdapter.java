@@ -18,19 +18,16 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
     public CategoryRecyclerViewAdapter() {
         super();
         mItems = new ArrayList<String>();
-        mItems.add("Amazing Spiderman 2");
-        mItems.add("The Guardians of Galaxy");
-        mItems.add("What If");
-        mItems.add("Big Hero 6");
-        mItems.add("The Hunger Game");
-        mItems.add("X-men: Days of Future Past");
-        mItems.add("The Lego Movie");
-        mItems.add("How to Train Your Dragon 2");
-        mItems.add("Maleficent");
-        mItems.add("22 Jump Street");
-        mItems.add("The Maze Runner");
-        mItems.add("Horrible Bosses 2");
-        mItems.add("Night at the Museum 3");
+        mItems.add("Academics");
+        mItems.add("Health");
+        mItems.add("Gaming and Entertainment");
+        mItems.add("Relationships");
+        mItems.add("Technology");
+        mItems.add("Movies");
+        mItems.add("General");
+        mItems.add("Fashion");
+        mItems.add("Arts");
+        mItems.add("Sports");
     }
 
     @Override
@@ -41,6 +38,10 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
         return viewHolder;
     }
 
+    public List<String> getmItems()
+    {
+        return mItems;
+    }
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         viewHolder.itemView.setText(mItems.get(i));

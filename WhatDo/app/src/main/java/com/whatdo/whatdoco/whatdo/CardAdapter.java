@@ -16,41 +16,18 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>{
 
     public CardAdapter() {
         super();
+        CategoryRecyclerViewAdapter c = new CategoryRecyclerViewAdapter();
+        List<String> catItems = c.getmItems();
         mItems = new ArrayList<Category>();
-        Category movie = new Category();
-        movie.setName("The Amazing Spider-Man 2");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
+        for (String cats:
+             catItems) {
+            Category category = new Category();
+            category.setName(cats);
+            category.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
+            mItems.add(category);
+        }
 
-        movie = new Category();
-        movie.setName("X-men: Days of Future Past");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
 
-        movie = new Category();
-        movie.setName("The Hunger Game");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
-
-        movie = new Category();
-        movie.setName("Guardians of the Galaxy");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
-
-        movie = new Category();
-        movie.setName("Maleficent");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
-
-        movie = new Category();
-        movie.setName("How to Train Your Dragon 2");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
-
-        movie = new Category();
-        movie.setName("What If");
-        movie.setThumbnail(R.drawable.what_do_logo_transparent_no_background);
-        mItems.add(movie);
     }
 
     @Override
