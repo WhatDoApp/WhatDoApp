@@ -2,6 +2,9 @@ package com.whatdo.whatdoco.whatdo;
 
 import android.app.Activity;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7d1fdb6ec3e25aa378b795298ce492bbf5e6a0d2
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -15,6 +18,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7d1fdb6ec3e25aa378b795298ce492bbf5e6a0d2
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -78,8 +84,11 @@ public class QuestionCreatorActivity extends Activity {
                 }
             }
         });
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 9e9d7ac... NavigationDrawer Added to Questions and Question Creator page
+=======
+>>>>>>> 7d1fdb6ec3e25aa378b795298ce492bbf5e6a0d2
     }
 
     @Override
